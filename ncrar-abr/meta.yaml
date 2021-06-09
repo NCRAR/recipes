@@ -1,0 +1,48 @@
+package:
+  name: ncrar-abr
+  version: 0.0.1.beta6
+
+source:
+  path: ./src/abr
+   
+build:
+  build: 0
+  entry_points:
+    - abr = abr.app:main_launcher
+    - abr-gui = abr.app:main_gui
+    - abr-batch = abr.app:main_batch
+    - abr-summarize = abr.app:main_summarize
+    - abr-compare = abr.app:main_compare
+
+requirements:
+  build:
+    - python
+  run:
+    - python >=3.8
+    - matplotlib
+    - atom
+    - enaml
+    - scipy
+    - numpy
+    - pandas
+    - openpyxl
+
+test:
+  imports:
+    - abr
+    - abr.data
+    - abr.parsers
+    - abr.parsers.NCRAR
+  commands:
+    - abr --help
+    - abr-gui --help
+    - abr-batch --help
+
+about:
+  license: BSD 3-clause
+  license_family: BSD
+  summary: GUI application for analyzing ABR waveforms. Customized for the NCRAR.
+
+extra:
+  recipe-maintainers:
+    - buranconsult

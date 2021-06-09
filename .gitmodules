@@ -1,0 +1,3 @@
+[submodule "ncrar-abr/src/abr"]
+	path = ncrar-abr/src/abr
+	url = git@github.com:NCRAR/abr

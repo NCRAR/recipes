@@ -1,0 +1,11 @@
+{
+    "menu_name": "NCRAR",
+    "menu_items":
+    [
+        {
+            "name": "ABR",
+            "script": "${PYTHON_SCRIPTS}/abr.exe",
+            "icon": "${MENU_DIR}/abr-icon.ico"
+        }
+    ]
+}
